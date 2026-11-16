@@ -79,3 +79,14 @@ print(number)
 print(type(number))
 print("Bits needed to store number",number.bit_length())
 
+"""
+Challenge:
+Create 5 variables - each with a different data type:
+1. Age
+2. Height (with decimals)
+3. Name
+4. Are you a student?
+5. Something with no value yet
+
+Then print the values, data types, lengths of all variables
+"""
