@@ -70,10 +70,10 @@ print(abs(2-10))
 price = 34.997863
 print(price)
 print(round(price))
+print(round(3.5))
+print(round(4.5))
 
 import math
 print("Import Math")
 print(math.floor(price))
 print(math.ceil(price))
-print(round(3.5))
-print(round(4.5))
