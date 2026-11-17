@@ -1,3 +1,4 @@
+"""                                            String Functions"""
 """"
 Types:
 -type()
