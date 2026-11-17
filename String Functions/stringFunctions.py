@@ -92,3 +92,4 @@ is_student = False #bool
 print(f"My name is {name}, {age} years old, student status is {is_student}.")
 print(f"2+3={2+3}")
 print(f"{{This is me}}")
+#---------------------Split
