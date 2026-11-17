@@ -181,3 +181,5 @@ job1 = info.replace("@","a")
 job2 = job1[13:26]
 print(age2)
 print(f"This is {fname}, her employee id is {id}, she is a {job2} and is {age2}.")
+
+"""                                            Search"""
