@@ -99,3 +99,12 @@ print(d.is_integer())
 print(isinstance(x,int))
 print(isinstance(t,float))
 print(isinstance(d,str))
+
+"""
+Challenge:
+Generate a random integer between 1 and 100,
+check if the result is an even number
+"""
+number = random.randint(1,101)
+print(number)
+print(number.is_integer())
