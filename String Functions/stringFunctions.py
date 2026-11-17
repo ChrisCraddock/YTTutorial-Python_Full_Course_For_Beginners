@@ -37,7 +37,7 @@ Validation:
 -isnumeric()
 """
 
-#-----------------------------------------------Types
+"""                                            Types"""
 
 #---------------------Type()
 name = "Me"
@@ -50,7 +50,7 @@ print(type(age))
 #---------------------Str()
 print("Your age is: "+str(age))
 
-#-----------------------------------------------Math
+"""                                            Math"""
 
 #---------------------Len()
 password = "123a"
@@ -63,7 +63,7 @@ Line 3"""
 #---------------------Count()
 print(text.count("Line"))
 
-#-----------------------------------------------Transformations
+"""                                            Transformations"""
 
 #---------------------Replace()
 price = "1234,56"
@@ -137,3 +137,47 @@ print(slicing[:4])
 print(slicing[5:7])
 #extract day
 print(slicing[8:])
+
+"""                                            Cleaning"""
+
+#---------------------Clean Whitespaces
+#lstrip() strip white spaces from the left
+#rstrip() strip white spaces from the right
+#strip() strip white spaces from both sides
+
+text = " Left Strip"
+print(text.lstrip())
+text = "Right Strip "
+print(text.rstrip())
+text = " Strip "
+print(text.strip())
+text = "###Strip###"
+print(text.strip("#"))
+#check for white spaces
+text = "Strip "
+print(len(text))
+print(len(text.strip()))
+print(len(text)-len(text.strip()))
+
+#---------------------Case Conversion
+#lower()
+#upper()
+text = 'WoRdS'
+print(f"Using '.lower()' {text.lower()}")
+print(f"Using '.upper()' {text.upper()}")
+
+'''
+Challenge:
+Turn the messy string into a single clean summary with the name, role and age
+"968-Maria, ( D@t@ Engineer );; 27y  "
+'''
+info = "968-Maria, ( D@t@ Engineer );; 27y  "
+
+id = info[:3]
+fname = info[4:9]
+age1 = info.strip()
+age2 = age1[-3:]
+job1 = info.replace("@","a")
+job2 = job1[13:26]
+print(age2)
+print(f"This is {fname}, her employee id is {id}, she is a {job2} and is {age2}.")
