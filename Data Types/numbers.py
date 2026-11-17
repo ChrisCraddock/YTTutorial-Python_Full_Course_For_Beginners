@@ -17,9 +17,9 @@
 """Rounding"""
 #abs() - absolute number, no negative sign
 #round() - rounds number to the nearest EVEN number
-#Math.ceil() - ceiling
-#Math.floor() - floor
-#Math.trunc() - truncate
+#Math.ceil() - ceiling - rounds up
+#Math.floor() - floor - rounds down
+#Math.trunc() - truncate - cuts off the decimal part and keeps the whole number (no round)
 """Advanced Math"""
 #sqrt() - square root
 #sin() - calculates the sine of of a number,
@@ -72,8 +72,10 @@ print(price)
 print(round(price))
 print(round(3.5))
 print(round(4.5))
+print(round(price,3)) #specify how many decimals to remain
 
 import math
 print("Import Math")
 print(math.floor(price))
 print(math.ceil(price))
+print(math.trunc(price))
