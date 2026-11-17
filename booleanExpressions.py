@@ -90,3 +90,36 @@ print(not 3>2)
 print(3>2)
 print(not 2>3)
 print(2>3)
+
+#By default AND has higher execution order than OR
+#Use () to control execution priority
+print(5==5 or 8>5 and 6<4)
+print((5==5 or 8>5) and 6<4)
+
+"""
+Challenge:
+1-Check if a user's name is NOT empy and the age is greater than or equal to 18
+2-Check if the password is atleast 8 characters long and does NOT contain spaces
+3-Check if a user's email contains '@', ends with'.com' and is NOT empty
+4-Check if a username is a string, is NOT None and is longer than 5 characters
+5-Check if the user is either an admin or a moderator, and either they're not banned or they've verified their email.
+"""
+username = "BobbleHead82"
+age = 24
+email = 'bobble82@gmail.com'
+permissions = 'Moderator'
+activity = 'Active'
+emailVerified = 'Verified'
+
+print("Challenge")
+usernameCheck = isinstance(username,str) is not None and len(username) > 5
+ageCheck = age >= 18
+passCheck = len(username) == len(username.strip())
+emailCheck = '@' in email and '.com' in email and len(email) > 5
+access = (permissions == 'Administrator' or 'Moderator') and (activity != 'Banned') and emailVerified == 'Verified'
+print(usernameCheck == ageCheck == passCheck == emailCheck == access)
+print(usernameCheck)
+print(ageCheck)
+print(passCheck)
+print(emailCheck)
+print(access)
