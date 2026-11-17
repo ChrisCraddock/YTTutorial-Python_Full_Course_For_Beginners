@@ -35,6 +35,9 @@
 x = 5
 y = 5.7
 z = 2+3j
-print("x is",x,f"whis is {type(x)}")
-print("y is",y,f"whis is {type(y)}")
-print("z is",z,f"whis is {type(z)}")
+b = "24"
+print("x is",x,f"which is {type(x)}")
+print("y is",y,f"which is {type(y)}")
+print("z is",z,f"which is {type(z)}")
+print("b is",b,f"which is {type(b)}")
+print("int(b) is",b,f"which is {type(int(b))}")
