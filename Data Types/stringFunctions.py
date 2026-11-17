@@ -96,7 +96,7 @@ file = "report.csv"
 full_path = folder+file
 print(full_path)
 
-# ---------------------F-String (formatted)
+"""                                            F-String (formatted)"""
 name = "Sam"  # str
 age = 34  # int
 is_student = False  # bool
@@ -161,7 +161,7 @@ print(len(text))
 print(len(text.strip()))
 print(len(text)-len(text.strip()))
 
-# ---------------------Case Conversion
+"""                                            Case Conversion"""
 # lower()
 # upper()
 text = 'WoRdS'

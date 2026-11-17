@@ -1,4 +1,4 @@
-#-------------------------------------------------------------Data Types
+"""                                            Data Types"""
 """
 Primitive/Core value types:
 str() = String
@@ -35,7 +35,9 @@ g = False #boolean
 h = None #no value
 i = "" #blank string value
 j = " " #empty string value
-#-------------------------------------------------------------Functions + Data Types
+
+"""                                            Functions + Data Types"""
+
 """
 3 types pf functions:
 Standalone: print()/type()
@@ -51,7 +53,7 @@ Standard library: Built-in module {len(),type(),print()} | Class str {upper(), r
 Math module: have to import {abs(),round(),floor}
 """
 
-#-------------------------------------------------------------Functions vs Methods
+"""                                            Functions vs Methods"""
 """
 Functions:
 Independent block of code
