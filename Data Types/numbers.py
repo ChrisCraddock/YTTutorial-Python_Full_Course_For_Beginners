@@ -28,11 +28,11 @@
 #        returning a float between -1 and 1
 #log() - computers the natural logarithm
 """Random"""
-#random() - 
-#randint() -
+#random() - returns a random float between 0.00 and 1.0
+#randint() - a whole number from start to end (start,end)
 """Validation"""
-#is_integer()
-#isinstance()
+#is_integer() - checks if whole number, does not count .0 as a float True/False
+#isinstance() - checks if a value belongs to a certain data type (value, type) True/False
 
 """                                            Types"""
 x = 5
@@ -79,3 +79,23 @@ print("Import Math")
 print(math.floor(price))
 print(math.ceil(price))
 print(math.trunc(price))
+
+"""                                            Random"""
+import random
+print("Import Random")
+print(random.random())
+print(random.randint(-1000000000000000,1000000000000000))
+
+"""                                            Float"""
+
+#is_integer()
+x = 7
+t = 7.0
+d = 7.1
+print(x.is_integer())
+print(t.is_integer())
+print(d.is_integer())
+#isinstance()
+print(isinstance(x,int))
+print(isinstance(t,float))
+print(isinstance(d,str))
