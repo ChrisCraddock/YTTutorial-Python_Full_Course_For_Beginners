@@ -62,13 +62,13 @@
 |     else:
 |         print("All numbers are odd.")
 |
-|
-|
-|
-|
 |----------Nested:
+|#Inner Loop - Runs after outerloop's 1st run and then, when finished, back to the outer loop
+|#Outer Loop - Runs 1st and then inner loop until finished and then 1 more outer lopp
 |
-|
+|Case:
+|     - Compare Lists
+|     - Navigate Hierarchy/Layers|
 """
 
 '''                                    Conditional Statement'''
@@ -289,3 +289,22 @@ for file in file_list:
         break
 print(file_checked)
 
+for x in (1,2,3):
+    for y in (1,2):
+        print(x,y)
+
+'''                                    Nested Loop'''
+
+for x in range(3):
+    for y in range(2):
+        for z in range(4):
+            print(f"({x}as X, {y}as Y, {z}as Z)")
+
+year = [2026,2027]
+months = ['Jan','Feb']
+days = range(1,26)
+
+for y in year:
+    for m in months:
+        for d in days:
+            print(f"{y}-{m}-{d}")
