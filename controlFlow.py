@@ -28,7 +28,13 @@
 |                                'A' if score >= 90 else 'F'
 |                                'A' if score >= 90 else 'B' if score >= 80 else 'F'
 |Use Case: Simple Logic -> Inline-if / Complex Logic -> Classical-if
-|#Case-Match - Evaluates a value against multiple values. Runs the code of the first match
+|#Case-Match - Evaluates a value against multiple values. Runs the code of the first match. Use '|' to check multiple values
+|                       Example: country = 'Japan'
+|                                match country:
+|                                    case 'Japan'
+|                                        print('JP')
+|                                    else _: #the '_' = 'default to'
+|                                        print('Ukn')
 |----------Types:
 |#For -
 |#While -
@@ -85,6 +91,35 @@ else:
 print('A' if score >= 90 else 'F')
 grade = 'A' if score >= 90 else 'B' if score >= 80 else 'F'
 print(grade)
+#Match Case
+country = 'India'
+if country == 'United States':
+    print('US')
+elif country == 'India':
+    print('IN')
+elif country == 'Germany':
+    print('DE')
+elif country == 'Russia':
+    print('RU')
+elif country == 'Japan':
+    print('JP')
+else:
+    print("Unk")
+
+country = 'Japan'
+match country:
+    case 'United States'|'USA':
+        print('US')
+    case 'India':
+        print('IN')
+    case 'Germany':
+        print('DE')
+    case 'Russia':
+        print('RU')
+    case 'Japan':
+        print('JP')
+    case _:
+        print("Unk")
 """
 Challenge #1
 Validate the quality and correctness of Email Values
