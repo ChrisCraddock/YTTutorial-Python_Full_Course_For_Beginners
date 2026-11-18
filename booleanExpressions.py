@@ -28,12 +28,13 @@ Use () to control execution priority
 -not - Reverses False to True and True to False
 """
 """                           Membership Operators
--in
--not in
+
+-in - Check if a value is inside another value (string, list tuple or other sequence) True/False
+-not in - Check if a value is not inside another value (string, list tuple or other sequence) True/False
 """
 """                           Identity Operators
--is
--is not
+-is - Check if 2 variables refer to the same object in memory True/False
+-is not - Check if 2 variables do not refer to the same object in memory True/False
 """
 
 '''                                    True/False'''
@@ -123,3 +124,35 @@ print(ageCheck)
 print(passCheck)
 print(emailCheck)
 print(access)
+
+'''                                    Membership Operators'''
+print('Membership Operators')
+#in
+emailCheck = '@' in email and '.com' in email and len(email) > 5
+print(emailCheck)
+#not in
+emailCheck2 = '$' not in email
+print(emailCheck2)
+
+'''                                    Identity Operators'''
+print('Identity Operators')
+#is
+a = [1,2,3]
+b = [1,2,3]
+c = 5
+d = 5
+e = 'a'
+f = 'b'
+print(a is b) #False
+print(c is d) #True
+print(id(a)) #Memory Location
+print(id(b)) #Memory Location
+print(id(d)) #Memory Location
+print(id(c)) #Memory Location
+#is not
+print(a is not b) #True
+print(c is not d) #False
+print(id(a)) #Memory Location
+print(id(b)) #Memory Location
+print(id(d)) #Memory Location
+print(id(c)) #Memory Location
