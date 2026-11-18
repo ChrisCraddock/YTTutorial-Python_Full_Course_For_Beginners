@@ -259,3 +259,33 @@ for i in items:
         break
 else:
     print("All numbers are odd.")
+
+"""
+Challenge #5
+Check whether any filename appears more than once:
+file_list = [
+'report.csv',
+'data.xlsx',
+'summary.docx',
+'report.csv',
+'data'.csv'
+]
+"""
+file_list = [
+'report.csv',
+'data.xlsx',
+'summary.docx',
+'report.csv',
+'data.csv'
+]
+file_checked = []
+
+for file in file_list:
+    if file not in file_checked:
+        file_checked.append(file)
+        print(file_checked)
+    else:
+        print('Duplicate found')
+        break
+print(file_checked)
+
