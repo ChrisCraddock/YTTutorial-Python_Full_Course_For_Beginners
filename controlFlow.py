@@ -41,6 +41,9 @@
 |                                    print(i)
 |       - takes the sequence and puts into memory an iterator: an object that goes through 1-by-1 in a sequence
 |                       Example: [1][2][3]
+|Use Case: 
+|          - aggregate data like sum, count or avg
+|          - transform data (cleaning) before processing {clean BEFORE manipulating}
 |#While -
 |
 |----------Control:
@@ -149,6 +152,7 @@ Validate the quality and correctness of Passwords
 print('challenge #2:')
 '''                                    Loops'''
 
+print("Loops")
 #For
 for i in (1,2,3,4,5):
     print(f"Round: {i}")
@@ -158,6 +162,24 @@ for spacecraft in items:
     print(f"Round: {spacecraft}")
 for items in spacecrafts:
     print(f"Round: {items}")
-
-for i in range(10): #starts counting at 0
+#---range(start{optional},stop,step{optional})
+for i in range(10): #starts counting at 0 
     print(i)
+for i in range(1,10): #starts counting at 1 and stops but not display 10
+    print(i)
+for i in range(1,10,4): #starts counting at 1, stops but not display 10, display every 4th numbers
+    print(i)
+
+"""
+Challenge #3
+Print the 7-times table from 1 to 10 using a 'for' loop
+"""
+print('challenge #3:')
+number = 7
+for num in range(1,11):
+    number = num
+    print(f"7 * {num} =",7*number)
+    number *= num
+
+
+#While
