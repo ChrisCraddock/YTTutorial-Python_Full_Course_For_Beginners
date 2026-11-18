@@ -44,12 +44,13 @@
 |Use Case: 
 |          - aggregate data like sum, count or avg
 |          - transform data (cleaning) before processing {clean BEFORE manipulating}
-|#While - While condition is True
+|#While - Repeat block of code over and over While condition is True
 |
 |----------Control:
 |#break - When to STOP. Stops the loop immediately
 |#pass - When to SKIP. Does not matter if condition met, used as placeholder. Should not be in final
 |#continue - When to PASS. Skips 1 loop cycle without stopping the loop {Use if condition is not critical}
+|
 |----------Else in for-loop:
 |Runs a block of code only if the loop finished naturally
 |Unlike 'if'-loop, 'else' executes every time at the end
@@ -308,3 +309,20 @@ for y in year:
     for m in months:
         for d in days:
             print(f"{y}-{m}-{d}")
+
+'''                                    While Loop'''
+i = 1
+while i<4:
+    print(i)
+    i += 1
+
+attempt = 0
+while attempt < 3:
+    answer = input("Yes or No: ")
+    if answer.lower() == "yes":
+        print("cool")
+        break
+    attempt += 1
+else:
+    print("Bummer")
+
