@@ -50,15 +50,17 @@
 |#break - When to STOP. Stops the loop immediately
 |#pass - When to SKIP. Does not matter if condition met, used as placeholder. Should not be in final
 |#continue - When to PASS. Skips 1 loop cycle without stopping the loop {Use if condition is not critical}
-|----------Else in:
+|----------Else in for-loop:
 |Runs a block of code only if the loop finished naturally
-|
-|
-|
-|
-|
-|
-|
+|Unlike 'if'-loop, 'else' executes every time at the end
+|Useless unless used WITH a Break. Used to detect if interruption occured.
+|  Example:
+|     items = [1,2,3,4]
+|     for i in items:
+|         if i % 2 == 0:
+|            print(f"Even number found: {i}")
+|     else:
+|         print("All numbers are odd.")
 |
 |
 |
@@ -249,3 +251,11 @@ for email in emails:
     if email.endswith(';'):
         continue
     print(f"Email: {email}")
+
+items = [1,2,3,4]
+for i in items:
+    if i % 2 == 0:
+        print(f"Even number found: {i}")
+        break
+else:
+    print("All numbers are odd.")
