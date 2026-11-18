@@ -23,6 +23,12 @@
 |                 -example- variable: 
 |#Independent if-else - Each 'if' is checked separatley, no dependancy
 |                              Loops
+|#One-Line if-else - Conditions on one line. 
+|                       Example: score = 100
+|                                'A' if score >= 90 else 'F'
+|                                'A' if score >= 90 else 'B' if score >= 80 else 'F'
+|Use Case: Simple Logic -> Inline-if / Complex Logic -> Classical-if
+|#Case-Match - Evaluates a value against multiple values. Runs the code of the first match
 |----------Types:
 |#For -
 |#While -
@@ -64,7 +70,7 @@ if score <=90:
     else:
         print('A')
 #Independent if-else
-score = 50
+score = 91
 submitted_project = True
 if score >= 90:
     print('High')
@@ -75,7 +81,10 @@ if submitted_project:
     print('Submitted')
 else:
     print('Not Submitted')
-
+#One-line if-else
+print('A' if score >= 90 else 'F')
+grade = 'A' if score >= 90 else 'B' if score >= 80 else 'F'
+print(grade)
 """
 Challenge #1
 Validate the quality and correctness of Email Values
