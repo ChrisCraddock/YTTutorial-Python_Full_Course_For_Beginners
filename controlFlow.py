@@ -36,7 +36,11 @@
 |                                    else _: #the '_' = 'default to'
 |                                        print('Ukn')
 |----------Types:
-|#For -
+|#For - Go through a group of items 1-by-1 to do something for each item
+|                       Example: for i(loop vairable) in (1,2,3){sequence}:
+|                                    print(i)
+|       - takes the sequence and puts into memory an iterator: an object that goes through 1-by-1 in a sequence
+|                       Example: [1][2][3]
 |#While -
 |
 |----------Control:
@@ -144,3 +148,16 @@ Validate the quality and correctness of Passwords
 """
 print('challenge #2:')
 '''                                    Loops'''
+
+#For
+for i in (1,2,3,4,5):
+    print(f"Round: {i}")
+items = (1,2,3,4,5)
+spacecrafts = [7,8,9,10]
+for spacecraft in items:
+    print(f"Round: {spacecraft}")
+for items in spacecrafts:
+    print(f"Round: {items}")
+
+for i in range(10): #starts counting at 0
+    print(i)
