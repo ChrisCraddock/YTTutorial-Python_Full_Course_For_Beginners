@@ -44,12 +44,29 @@
 |Use Case: 
 |          - aggregate data like sum, count or avg
 |          - transform data (cleaning) before processing {clean BEFORE manipulating}
-|#While -
+|#While - While condition is True
 |
 |----------Control:
-|#break -
-|#pass -
-|#continue -
+|#break - When to STOP. Stops the loop immediately
+|#pass - When to SKIP. Does not matter if condition met, used as placeholder. Should not be in final
+|#continue - When to PASS. Skips 1 loop cycle without stopping the loop {Use if condition is not critical}
+|----------Else in:
+|Runs a block of code only if the loop finished naturally
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|----------Nested:
+|
+|
 """
 
 '''                                    Conditional Statement'''
@@ -181,5 +198,54 @@ for num in range(1,11):
     print(f"7 * {num} =",7*number)
     number *= num
 
-
+"""
+Challenge #4
+Print a left-aligned pyramid of stars with 6 rows using a for-loop
+"""
+print('challenge #4:')
+stars = 6
+for star in range(1,stars+1):
+    for j in range(star):
+        print('*', end=' ')
+    print()
+   
 #While
+
+'''                                    Control'''
+print("Control:")
+#Break
+names = ['john','maria','','kumar']
+for name in names:
+    print(f"Name= {name}")
+
+for name in names:
+    if name == '':
+        print('Empyt value')
+        break
+    print(f"Name= {name}")
+
+#Continue
+names = ['john','maria','','kumar']
+for name in names:
+    if name == '':
+        print("Empyt Value")
+        continue
+    print(f"Name= {name}")
+
+#Pass
+names = ['john','maria','','kumar']
+for name in names:
+    if name == '':
+        pass #todo: Handle later
+    print(f"Name= {name}")
+
+emails = [
+    'data@data.com',
+    'scam@user.net',
+    'DROP TABLE USERS;',
+    'steve@gmail.com'
+]
+for email in emails:
+    if email.endswith(';'):
+        continue
+    print(f"Email: {email}")
