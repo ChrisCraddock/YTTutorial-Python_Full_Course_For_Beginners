@@ -86,6 +86,7 @@
 |               -Deep Copy: copy.deepcopy() Import Copy module. Does not reflect changes made in one list to the other list 
 |               
 |               -Note: copy.copy is more generaly that list.copy and not limited to lists
+|               -Note: Avoid Assignment | use .copy() for simple/flat list | use copy.deepcopy() for nested lists | Always make extra copy for testing
 |
 |How to Combine:
 |
@@ -255,7 +256,7 @@ print(new_matrix)
  ['g', 'e', 'b']]
 """
 '''                                    How to Copy:'''
-
+"""
 print('How to Copy')
 #Reference
 letters = ['a','b','c','d']
@@ -314,7 +315,7 @@ matrix_copy = copy.deepcopy(matrix)
 matrix_copy[0].append('z')
 print("original:",matrix)
 print("copy append:",matrix_copy)
-
+"""
 '''                                    How to Combine:'''
 
 print('How to Combine:')
