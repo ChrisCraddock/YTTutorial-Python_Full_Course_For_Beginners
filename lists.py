@@ -189,10 +189,8 @@ print(letters)
 #insert
 letters.insert(0,'b')
 print(letters)
-"""
-'''                                    How to Order:'''
-"""
-print('How to Order:')
+
+
 lists = ["a",2,"b",4]
 print(lists)
 lists.pop(2)
@@ -213,16 +211,13 @@ print(matrix)
 matrix[1].remove('e')
 print(matrix)
 """
-'''                                    How to Copy:'''
+'''                                    How to Order:'''
 """
 print('How to Copy:')
 letters = ['a','b']
 letters[:] = 'c'
 print(letters)
-"""
-'''                                    How to Combine:'''
-"""
-print('How to Combine:')
+
 #Sorting
 letters = ['c','r','n','a','b']
 letters.sort()
@@ -251,6 +246,15 @@ print(new_matrix)
  ['d', 'h', 'c'],
  ['g', 'e', 'b']]
 """
+'''                                    How to Copy:'''
+
+print('How to Copy')
+
+'''                                    How to Combine:'''
+
+print('How to Combine:')
+
+
 '''                                    How to Iterate:'''
 
 print('How to Iterate:')
