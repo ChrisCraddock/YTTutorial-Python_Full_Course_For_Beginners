@@ -81,10 +81,11 @@
 |                            - 
 |               -.copy(): Create seperate, indapendant list in memory
 |                            - 
-|               -Shallow Copy:
+|               -Shallow Copy: .copy() on a matrix..but may reflect changes made in one list to the other list (same as copy.copy)
 |                            - 
-|               -Deep Copy:
-|                            - 
+|               -Deep Copy: copy.deepcopy() Import Copy module. Does not reflect changes made in one list to the other list 
+|               
+|               -Note: copy.copy is more generaly that list.copy and not limited to lists
 |
 |How to Combine:
 |
@@ -274,7 +275,45 @@ matrix = [['a', 'f', 'i'],
           ['d', 'h', 'c'],
           ['g', 'e', 'b']]
 matrix_copy = matrix.copy()
+print("original:",matrix)
+print("copy:",matrix_copy)
+matrix.pop()
+print("original pop:",matrix)
+print("copy:",matrix_copy)
+
+matrix = [['a', 'f', 'i'],
+          ['d', 'h', 'c'],
+          ['g', 'e', 'b']]
+matrix_copy = matrix.copy()
+matrix_copy.pop()
+print("original:",matrix)
+print("copy pop:",matrix_copy)
+
+matrix = [['a', 'f', 'i'],
+          ['d', 'h', 'c'],
+          ['g', 'e', 'b']]
+matrix_copy = matrix.copy()
+matrix[0].append('z')
+print("original append:",matrix)
+print("copy",matrix_copy)
+
+matrix = [['a', 'f', 'i'],
+          ['d', 'h', 'c'],
+          ['g', 'e', 'b']]
+matrix_copy = matrix.copy()
+matrix_copy[0].append('z')
+print("original:",matrix)
+print("copy append:",matrix_copy)
+
 #Deep Copy
+import copy
+matrix = [['a', 'f', 'i'],
+          ['d', 'h', 'c'],
+          ['g', 'e', 'b']]
+matrix_copy = copy.deepcopy(matrix)
+matrix_copy[0].append('z')
+print("original:",matrix)
+print("copy append:",matrix_copy)
 
 '''                                    How to Combine:'''
 
