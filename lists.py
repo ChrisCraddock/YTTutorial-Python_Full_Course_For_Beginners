@@ -65,6 +65,15 @@
 |                            - Remove specified value from specified row matrix[2].pop(0)
 |
 |How to Order:
+|               -.sort(): - For sorting current list into a new list
+|                            - default: from smallest to largest or A-Z.
+|                            - (reverse = True) from largest to smallest or Z-A
+|                            - Matrix: sorts by the 1st item of each row and then by the inner list
+|               -sorted(): - For sorting current list into a new list
+|                            - default: from smallest to largest or A-Z.
+|               -.reverse(): - Reverse the order of the list
+|               -reversed(): - Creates an iterator object, not a list
+|               -list(reversed()): - Creates a reversed list of the iterator object
 |
 |
 |How to Copy:
@@ -212,11 +221,40 @@ letters[:] = 'c'
 print(letters)
 """
 '''                                    How to Combine:'''
-
+"""
 print('How to Combine:')
+#Sorting
+letters = ['c','r','n','a','b']
+letters.sort()
+print(letters)
+letters.sort(reverse=True)
+print(letters)
+
+matrix = [
+    ['d','h','c'],
+    ['g','e','b'],
+    ['a','f','i']
+]
+#Sorted
+letters = ['c','r','n','a','b']
+new_letters = sorted(letters)
+print(new_letters)
+
+matrix = [
+    ['d','h','c'],
+    ['g','e','b'],
+    ['a','f','i']
+]
+new_matrix = sorted(matrix)
+print(new_matrix)
+[['a', 'f', 'i'],
+ ['d', 'h', 'c'],
+ ['g', 'e', 'b']]
+"""
 '''                                    How to Iterate:'''
 
 print('How to Iterate:')
+
 '''                                    How to Transform:'''
 
 print('How to Transform:')
