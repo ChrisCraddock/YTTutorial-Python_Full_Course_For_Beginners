@@ -77,7 +77,14 @@
 |
 |
 |How to Copy:
-|
+|               -Reference: If you use assignment (copy = original) any addition to new variable is reflected in original
+|                            - 
+|               -.copy(): Create seperate, indapendant list in memory
+|                            - 
+|               -Shallow Copy:
+|                            - 
+|               -Deep Copy:
+|                            - 
 |
 |How to Combine:
 |
@@ -249,6 +256,25 @@ print(new_matrix)
 '''                                    How to Copy:'''
 
 print('How to Copy')
+#Reference
+letters = ['a','b','c','d']
+letters_copy = letters
+letters_copy.append('z')
+print(letters)
+print(letters_copy)
+#Copy
+letters = ['a','b','c','d']
+letters_copy = letters.copy()
+letters_copy.reverse()
+print(letters)
+print(letters_copy)
+
+#Shallow Copy
+matrix = [['a', 'f', 'i'],
+          ['d', 'h', 'c'],
+          ['g', 'e', 'b']]
+matrix_copy = matrix.copy()
+#Deep Copy
 
 '''                                    How to Combine:'''
 
