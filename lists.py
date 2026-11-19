@@ -45,9 +45,24 @@
 |               -Comparison: <, > The first elements are compared, if they are equal then moves on to next element
 |               -Is: checks stored memory adress, not list itself
 |How to Change:
-|               -Add
-|               -Update
-|               -Remove
+|               -Add:
+|                   -.append(): Add new value at end of list
+|                   -.insert(): Add new value at start of row or with specified position (index,value) or for matrix: (index,[value])
+|               -Update: Replace the position in the list and the value to replace with. Replace list entirely using blank [:] = 'value'
+|                            -letters = ['a']
+|                             letters[0] = 'b'
+|                            -matrix[2] = ['x','y','z'] <--Target entire row
+|                            -matrix[1][2] = '-' <--Target specific location
+|               -Remove: Remove old, duplicate and/or bad data
+|                   -.clear(): Remove ALL from list
+|                   -.remove(): 
+|                            - Remove 1st occurance in a list (value) 
+|                            - Remove specified row from matrix matrix.remove(['a','b','c'])
+|                            - Remove specified value from specified row from matrix matrix[1].remove('e')
+|                   -.pop(): 
+|                            - Remove by position or leave empty for last in list
+|                            - Remove last row from matrix matrix.pop()
+|                            - Remove specified value from specified row matrix[2].pop(0)
 |
 |How to Order:
 |
@@ -156,14 +171,46 @@ print("Index:",numbers.index(3))
 print(4 in numbers)
 """
 '''                                    How to Change:'''
-
+"""
+#append
 print('How to Change:')
+letters = []
+letters.append('a')
+print(letters)
+#insert
+letters.insert(0,'b')
+print(letters)
+"""
 '''                                    How to Order:'''
-
+"""
 print('How to Order:')
-'''                                    How to Copy:'''
+lists = ["a",2,"b",4]
+print(lists)
+lists.pop(2)
+print(lists)
+lists.remove('a')
+print(lists)
+lists.clear()
+print(lists)
 
+matrix = [
+    ['a','b','c'],
+    ['d','e','f'],
+    ['g','h','i']
+]
+print(matrix)
+#matrix[1].pop(1)
+#print(matrix)
+matrix[1].remove('e')
+print(matrix)
+"""
+'''                                    How to Copy:'''
+"""
 print('How to Copy:')
+letters = ['a','b']
+letters[:] = 'c'
+print(letters)
+"""
 '''                                    How to Combine:'''
 
 print('How to Combine:')
