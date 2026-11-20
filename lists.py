@@ -89,6 +89,13 @@
 |               -Note: Avoid Assignment | use .copy() for simple/flat list | use copy.deepcopy() for nested lists | Always make extra copy for testing
 |
 |How to Combine:
+|               -Note: Multiplier * operator makes multiple copies of the same list  print(combo*2)
+|               -Combine 2 lists to make 3rd list. list3 = list1 + list2
+|               -Combine 2 lists to make 3rd list but seperated. list3 = [list1, list2]
+|               -extend() - list1.extend(list2)
+|               -zip() - pairing each item from each list together to make a list of tuple, stopping at the end of the shortest list 
+|                   -must convert from iterator. list(zip())
+|                   -Can pair with a string which gets parsed, counts as sequence zip(list1, list2, 'hi')
 |
 |
 |How to Iterate:
@@ -317,10 +324,36 @@ print("original:",matrix)
 print("copy append:",matrix_copy)
 """
 '''                                    How to Combine:'''
-
+"""
 print('How to Combine:')
+#combining - single list
+print("Combining- single list")
+letters = ['a','b','c']
+numbers = [1,2,3,]
+combo = letters + numbers
+print(combo)
 
+#combining - seperate
+print("Combining - seperate lists")
+letters = ['a','b','c']
+numbers = [1,2,3,]
+combo = [letters, numbers]
+print(combo)
 
+#combining - extend
+print("Combining - seperate lists")
+letters = ['a','b','c']
+numbers = [1,2,3,]
+numbers.extend(letters)
+print(numbers)
+
+#zip
+print("Combining - zip")
+letters = ['a','b','c']
+numbers = [1,2,3,]
+combo = list(zip(letters, numbers))
+print(combo)
+"""
 '''                                    How to Iterate:'''
 
 print('How to Iterate:')
