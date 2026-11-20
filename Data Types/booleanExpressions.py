@@ -1,41 +1,41 @@
-"""----------------------------------------------Boolean Expressions"""
-
-"""                           Values
--True = if the value is non-empty or non-zero
--False = if the value is empty or zero
-"""
-"""                           Functions
--bool() - True/False
--any() - Returns True if ANY value is True
--all() - Returns True if ALL values are True
--isinstance() - checks if a value belongs to a certain data type (value,type)
-"""
-"""                           Comparison Operators
-Compare string values alphabetically
-1x = is for assigning variables
--== - is equal to
--!= - is not equal to
--< - less than
--> - greater than
-->= - greater than or equal to
--<= - less than or equal to
-"""
-"""                           Logical Operators
-By default AND has higher execution order than OR
-Use () to control execution priority
--and - Both must be True
--or - Atleast 1 must be True, All False = False
--not - Reverses False to True and True to False
-"""
-"""                           Membership Operators
-
--in - Check if a value is inside another value (string, list tuple or other sequence) True/False
--not in - Check if a value is not inside another value (string, list tuple or other sequence) True/False
-"""
-"""                           Identity Operators
--is - Check if 2 variables refer to the same object in memory True/False
--is not - Check if 2 variables do not refer to the same object in memory True/False
-"""
+'''                                             Boolean Expressions
+|
+|Values
+|                    -True = if the value is non-empty or non-zero
+|                    -False = if the value is empty or zero
+|===================================================================================================================|
+|Functions
+|                    -bool() - True/False
+|                    -any() - Returns True if ANY value is True
+|                    -all() - Returns True if ALL values are True
+|                    -isinstance() - checks if a value belongs to a certain data type (value,type)
+|===================================================================================================================|
+|Comparison Operators
+|                    -Compare string values alphabetically
+|                    1x = is for assigning variables
+|                    == - is equal to
+|                    != - is not equal to
+|                    < - less than
+|                    > - greater than
+|                    >= - greater than or equal to
+|                    <= - less than or equal to
+|===================================================================================================================|
+|Logical Operators
+|                    -By default AND has higher execution order than OR
+|                    -Use () to control execution priority
+|                    -and - Both must be True
+|                    -or - Atleast 1 must be True, All False = False
+|                    -not - Reverses False to True and True to False
+|===================================================================================================================|
+|Membership Operators
+|                    -in - Check if a value is inside another value (string, list tuple or other sequence) True/False
+|                    -not in - Check if a value is not inside another value (string, list tuple or other sequence) True/False
+|===================================================================================================================|
+|Identity Operators
+|                    -is - Check if 2 variables refer to the same object in memory True/False
+|                    -is not - Check if 2 variables do not refer to the same object in memory True/False
+|===================================================================================================================|
+'''
 
 '''                                    True/False'''
 #True = if the value is non-empty or non-zero
