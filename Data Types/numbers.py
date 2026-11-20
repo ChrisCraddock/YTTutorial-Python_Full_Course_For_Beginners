@@ -1,39 +1,45 @@
-"""                                            Numbers"""
-"""Types"""
-#Int = whole numbers
-#float = decimal numbers
-#complex = real number + imaginary (advanced math / engineering / physics / science)
-"""Math Operators"""
-#+ - addition
-#- - subtraction
-#* - multiply
-#/ - division
-#// - floor division - dived 2 numbers and rounds down
-#% - returns the leftovers (detect if numbers are even or odd)
-#** - exponent - to the power of
-#+= - increase variable by stated amount
-#-= - decrease variable by stated amount
-#*= - multiple by certain amount
-"""Rounding"""
-#abs() - absolute number, no negative sign
-#round() - rounds number to the nearest EVEN number
-#Math.ceil() - ceiling - rounds up
-#Math.floor() - floor - rounds down
-#Math.trunc() - truncate - cuts off the decimal part and keeps the whole number (no round)
-"""Advanced Math"""
-#sqrt() - square root
-#sin() - calculates the sine of of a number,
-#        where the input must be in radians and the output is a float between -1 and 1
-#cos() - calculates the cosine of an angle x given in radians,
-#        returning a float between -1 and 1
-#log() - computers the natural logarithm
-"""Random"""
-#random() - returns a random float between 0.00 and 1.0
-#randint() - a whole number from start to end (start,end)
-"""Validation"""
-#is_integer() - checks if whole number, does not count .0 as a float True/False
-#isinstance() - checks if a value belongs to a certain data type (value, type) True/False
-
+'''                                              Numbers
+|Types
+|                   -Int = whole numbers
+|                   -float = decimal numbers
+|                   -complex = real number + imaginary (advanced math / engineering / physics / science)
+|===================================================================================================================|
+|Math Operators
+|                    + - addition
+|                    - - subtraction
+|                    * - multiply
+|                    / - division
+|                    // - floor division - dived 2 numbers and rounds down
+|                    % - returns the leftovers (detect if numbers are even or odd)
+|                    ** - exponent - to the power of
+|                    += - increase variable by stated amount
+|                    -= - decrease variable by stated amount
+|                    *= - multiple by certain amount
+|===================================================================================================================|
+|Rounding
+|                   -abs() - absolute number, no negative sign
+|                   -round() - rounds number to the nearest EVEN number
+|                   -Math.ceil() - ceiling - rounds up
+|                   -Math.floor() - floor - rounds down
+|                   -Math.trunc() - truncate - cuts off the decimal part and keeps the whole number (no round)
+|===================================================================================================================|
+|Advanced Math
+|                   -sqrt() - square root
+|                   -sin() - calculates the sine of of a number,
+|                            where the input must be in radians and the output is a float between -1 and 1
+|                   -cos() - calculates the cosine of an angle x given in radians,
+|                            returning a float between -1 and 1
+|                   -log() - computers the natural logarithm
+|===================================================================================================================|
+|Random
+|                   -random() - returns a random float between 0.00 and 1.0
+|                   -randint() - a whole number from start to end (start,end)
+|===================================================================================================================|
+|Validation
+|                   -is_integer() - checks if whole number, does not count .0 as a float True/False
+|                   -isinstance() - checks if a value belongs to a certain data type (value, type) True/False
+|===================================================================================================================|
+'''
 """                                            Types"""
 x = 5
 y = 5.7

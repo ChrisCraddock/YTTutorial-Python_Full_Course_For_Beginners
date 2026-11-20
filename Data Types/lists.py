@@ -1,17 +1,17 @@
 """                                              Lists
 |
-|#List(value) - converts an iterable (sequence) into a list
-|#Nested List - 2 or more lists inside 1 list
-|#Matrix[] - row,column
+|                   List(value) - converts an iterable (sequence) into a list
+|                   Nested List - 2 or more lists inside 1 list
+|                   Matrix[] - row,column
 |                      List: []
 |                      Nested List: [[],[]] 
 |                      Matrix:  0  1  2  
 |                       row 0  [a][b][c]
 |                       row 1  [d][e][f]
 |                       row 2  [g][h][i]
-|-Target entire row: matrix[1] | Target entire matrix: matrix 
-|-Target specific: matrix[row][column] | Target multiple rows: [startRow:stopRow]
-|-Target specific items in rows: [start][:end]
+|                   Target entire row: matrix[1] | Target entire matrix: matrix 
+|                   Target specific: matrix[row][column] | Target multiple rows: [startRow:stopRow]
+|                   Target specific items in rows: [start][:end]
 |===================================================================================================================|
 |How to create lists:
 |                   -Empty
