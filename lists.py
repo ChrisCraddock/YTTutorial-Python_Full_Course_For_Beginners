@@ -12,24 +12,24 @@
 |-Target entire row: matrix[1] | Target entire matrix: matrix 
 |-Target specific: matrix[row][column] | Target multiple rows: [startRow:stopRow]
 |-Target specific items in rows: [start][:end]
-|===================================================================================================================
+|===================================================================================================================|
 |How to create lists:
 |                   -Empty
 |                   -Manual
 |                   -Nested
-|===================================================================================================================
+|===================================================================================================================|
 |How to Access & Read:
 |                    -Indexing [a][b][c][d]
 |                              [0][1][2][3]
 |                     letters[3] or letters[-1]
 |-Target multiple items: [start:stop]
-|===================================================================================================================
+|===================================================================================================================|
 |How to Unpack:
 |               -order of variables must match order of values. list1 = [spot1,spot2,spot3] spot1,spot2,spot3 = list1
 |               - number of variables must match number of values unless using '*'
 |               - you can unpack any sequence (lists,tuples,strings,etc.)
 |               - _ can be used where you don't need to store a value
-|===================================================================================================================
+|===================================================================================================================|
 |How to Explore & Analyze:
 |               -All(): True/False
 |                   - 0, '' considered to be empty and give False, ' ' is not considered empty and will give True
@@ -46,7 +46,7 @@
 |               -Not In: Check if value does not exists in a sequence. True/False
 |               -Comparison: <, > The first elements are compared, if they are equal then moves on to next element
 |               -Is: checks stored memory adress, not list itself
-|===================================================================================================================
+|===================================================================================================================|
 |How to Change:
 |               -Add:
 |                   -.append(): Add new value at end of list
@@ -66,7 +66,7 @@
 |                            - Remove by position or leave empty for last in list
 |                            - Remove last row from matrix matrix.pop()
 |                            - Remove specified value from specified row matrix[2].pop(0)
-|===================================================================================================================
+|===================================================================================================================|
 |How to Order:
 |               -.sort(): - For sorting current list into a new list
 |                            - default: from smallest to largest or A-Z.
@@ -89,7 +89,7 @@
 |               
 |               -Note: copy.copy is more generaly that list.copy and not limited to lists
 |               -Note: Avoid Assignment | use .copy() for simple/flat list | use copy.deepcopy() for nested lists | Always make extra copy for testing
-|===================================================================================================================
+|===================================================================================================================|
 |How to Combine:
 |               -Note: Multiplier * operator makes multiple copies of the same list  print(combo*2)
 |               -Combine 2 lists to make 3rd list. list3 = list1 + list2
@@ -128,25 +128,14 @@
 |                               |    |      2. Put in lambda 
 |                               |    3. map functions to iterator to manipulate data 
 |                               4. use list() to convert from memory state
-|
+|===================================================================================================================|
+|How to Filter:
 |               -lambda + filter: for matrix specifically, iterations happen 1 row at a time
 |                       - lambda row: row[1] > 70, matrix_name
 |               -sorted + lambda: sorted(iterable, key = lambda x:x)
-|How to Filter:
 |
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+|------------------------------------------List Comprehension
+|               -Loop > Transform > Filter
 |
 """
 
@@ -409,7 +398,7 @@ letters = ['a','b','c']
 print(map(str.upper, letters))
 """
 '''                                    How to Transform:'''
-
+"""
 print('How to Transform:')
 print('Lambda')
 multiply = lambda x: x*2
@@ -426,6 +415,10 @@ r = lambda r: float(r.replace('$',''))
 print(r)
 print(list(map(lambda r: float(r.replace('$','')),prices)))
 
+"""
+'''                                    How to Filter:'''
+"""
+print('How to Filter:')
 prices = [120,30, 300, 80]
 print(list(filter(lambda p: p >= 100, prices)))
 
@@ -437,9 +430,21 @@ student = [
 print(list(filter(lambda row: row[1] > 70, student)))
 print(student[1][0].startswith('M'))
 print(list(filter(lambda row: row[0].startswith('M'), student)))
+"""
+'''------------------------------------------List Comprehension'''
 
-'''                                    How to Filter:'''
-
-print('How to Filter:')
-
-
+domain = [
+    'www.google.com',
+    'openai.com',
+    'localhost'
+]
+cleaned = [
+    #datat_transform (required)
+    #using JUST the variable name means no transforming
+    d.lower().replace('www.','')
+    #forloop (required)
+    for d in domain
+    #data_filtering (optional)
+    if '.' in d #make sure '.' exists to be added to list
+]
+print(cleaned)
