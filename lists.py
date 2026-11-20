@@ -99,6 +99,18 @@
 |
 |
 |How to Iterate:
+|               -Iterator - Something doing the looping
+|                   -enumberate(iterable) - Returns postion of object + object, also use list()
+|                       -Has 2 requirements for loops: index, value. Ex: for index,value in enumerate(var_name): print(index,value)
+|                   -reversed() - returns an iterator that flips the data, also use list()
+|                   -map(function, iterable): becomes a map iterator object but can be transformed into a list later
+|                       -map(str.upper, letters) -> list(map(str.upper, letters))
+|                       -map(int, numbers) converts string numbers to int numbers
+|                   -filter(function,iterable) -> filter(None or bool,letters) None = '',None,False and get only strings/ints
+|                   -isalpha() - Only keeps letters (alphabetic) items. Ex: list(filter(str.isalpha,items))
+|
+|               -Iterable - Something you can loop over
+|                   -Use to transform data. Ex: .lower()/.upper()
 |
 |
 |How to Transform:
@@ -355,9 +367,31 @@ combo = list(zip(letters, numbers))
 print(combo)
 """
 '''                                    How to Iterate:'''
-
+"""
 print('How to Iterate:')
+letters = ['a','b','c']
+for l in letters:
+    print(letters)
 
+letters = ['a','b','c']
+new_list = []
+for l in letters:
+    new_list.append(l.upper())
+    print(new_list)
+
+letters = ['a','b','c']
+print(list(enumerate(letters, start = 1)))
+
+letters = ['a','b','c']
+for index,value in enumerate(letters):
+    print(index,value)
+
+letters = ['a','b','c']
+print(list(reversed(letters)))
+
+letters = ['a','b','c']
+print(map(str.upper, letters))
+"""
 '''                                    How to Transform:'''
 
 print('How to Transform:')
