@@ -1,60 +1,61 @@
 """----------------------------------------------Control Flow"""
 
 """                           Conditional Statements
-|-Check if condition is True or False and proceed accordingly
-|#if - Define 1st condition
-|      - only 1 'if' per statement
-|      - must start with 'if'
-|      - is required but can stand alone 
-|#else - Runs only if all previous conditions are False. 
-|        - Must come at end of statement
-|        - does not require condition
-|        - optional
-|        - cannot stand alone
-|        - only 1 else
-|#elif - {if-elif-else} Asks a follow-up question, Only runs if previous conditions were false.
-|        - Only comes after 'if'
-|        - allowed to have multiple 'elif'
-|        - needs codition
-|        - cannot stand alone
-|        - optional
-|#Nested 'if' - 'if' statement inside another 'if'. Each 'if' can be followed by 'else'
-|               - Python evalutes Boolean conditions directly, avoid explicit comparisons == True or == False  
-|                 -example- variable: 
-|#Independent if-else - Each 'if' is checked separatley, no dependancy
+|               -Check if condition is True or False and proceed accordingly
+|               -if - Define 1st condition
+|                   - only 1 'if' per statement
+|                   - must start with 'if'
+|                   - is required but can stand alone 
+|               -else - Runs only if all previous conditions are False. 
+|                   - Must come at end of statement
+|                   - does not require condition
+|                   - optional
+|                   - cannot stand alone
+|                   - only 1 else
+|                      -elif - {if-elif-else} Asks a follow-up question, Only runs if previous conditions were false.
+|                   - Only comes after 'if'
+|                   - allowed to have multiple 'elif'
+|                   - needs codition
+|                   - cannot stand alone
+|                   - optional
+|               -Nested 'if' - 'if' statement inside another 'if'. Each 'if' can be followed by 'else'
+|                   - Python evalutes Boolean conditions directly, avoid explicit comparisons == True or == False  
+|                   -example- variable: 
+|               -Independent if-else - Each 'if' is checked separatley, no dependancy
 |                              Loops
-|#One-Line if-else - Conditions on one line. 
+|               -One-Line if-else - Conditions on one line. 
 |                       Example: score = 100
 |                                'A' if score >= 90 else 'F'
 |                                'A' if score >= 90 else 'B' if score >= 80 else 'F'
 |Use Case: Simple Logic -> Inline-if / Complex Logic -> Classical-if
-|#Case-Match - Evaluates a value against multiple values. Runs the code of the first match. Use '|' to check multiple values
+|               -Case-Match - Evaluates a value against multiple values. Runs the code of the first match. Use '|' to check multiple values
 |                       Example: country = 'Japan'
 |                                match country:
 |                                    case 'Japan'
 |                                        print('JP')
 |                                    else _: #the '_' = 'default to'
 |                                        print('Ukn')
-|----------Types:
-|#For - Go through a group of items 1-by-1 to do something for each item
+|===================================================================================================================|
+|Types:
+|               -For - Go through a group of items 1-by-1 to do something for each item
 |                       Example: for i(loop vairable) in (1,2,3){sequence}:
 |                                    print(i)
-|       - takes the sequence and puts into memory an iterator: an object that goes through 1-by-1 in a sequence
+|               -Takes the sequence and puts into memory an iterator: an object that goes through 1-by-1 in a sequence
 |                       Example: [1][2][3]
 |Use Case: 
 |          - aggregate data like sum, count or avg
 |          - transform data (cleaning) before processing {clean BEFORE manipulating}
-|#While - Repeat block of code over and over While condition is True
-|
-|----------Control:
-|#break - When to STOP. Stops the loop immediately
-|#pass - When to SKIP. Does not matter if condition met, used as placeholder. Should not be in final
-|#continue - When to PASS. Skips 1 loop cycle without stopping the loop {Use if condition is not critical}
-|
-|----------Else in for-loop:
-|Runs a block of code only if the loop finished naturally
-|Unlike 'if'-loop, 'else' executes every time at the end
-|Useless unless used WITH a Break. Used to detect if interruption occured.
+|               -While - Repeat block of code over and over While condition is True
+|===================================================================================================================|
+|Control:
+|               -break - When to STOP. Stops the loop immediately
+|               -pass - When to SKIP. Does not matter if condition met, used as placeholder. Should not be in final
+|               -continue - When to PASS. Skips 1 loop cycle without stopping the loop {Use if condition is not critical}
+|===================================================================================================================|
+|Else in for-loop:
+|               -Runs a block of code only if the loop finished naturally
+|               -Unlike 'if'-loop, 'else' executes every time at the end
+|               -Useless unless used WITH a Break. Used to detect if interruption occured.
 |  Example:
 |     items = [1,2,3,4]
 |     for i in items:
@@ -62,14 +63,15 @@
 |            print(f"Even number found: {i}")
 |     else:
 |         print("All numbers are odd.")
-|
-|----------Nested:
-|#Inner Loop - Runs after outerloop's 1st run and then, when finished, back to the outer loop
-|#Outer Loop - Runs 1st and then inner loop until finished and then 1 more outer lopp
+|===================================================================================================================|
+|Nested:
+|               -Inner Loop - Runs after outerloop's 1st run and then, when finished, back to the outer loop
+|               -Outer Loop - Runs 1st and then inner loop until finished and then 1 more outer lopp
 |
 |Case:
 |     - Compare Lists
-|     - Navigate Hierarchy/Layers|
+|     - Navigate Hierarchy/Layers
+|===================================================================================================================|
 """
 
 '''                                    Conditional Statement'''
