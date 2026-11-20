@@ -12,22 +12,24 @@
 |-Target entire row: matrix[1] | Target entire matrix: matrix 
 |-Target specific: matrix[row][column] | Target multiple rows: [startRow:stopRow]
 |-Target specific items in rows: [start][:end]
-|
+|===================================================================================================================
 |How to create lists:
 |                   -Empty
 |                   -Manual
 |                   -Nested
+|===================================================================================================================
 |How to Access & Read:
 |                    -Indexing [a][b][c][d]
 |                              [0][1][2][3]
 |                     letters[3] or letters[-1]
 |-Target multiple items: [start:stop]
-|
+|===================================================================================================================
 |How to Unpack:
 |               -order of variables must match order of values. list1 = [spot1,spot2,spot3] spot1,spot2,spot3 = list1
 |               - number of variables must match number of values unless using '*'
 |               - you can unpack any sequence (lists,tuples,strings,etc.)
 |               - _ can be used where you don't need to store a value
+|===================================================================================================================
 |How to Explore & Analyze:
 |               -All(): True/False
 |                   - 0, '' considered to be empty and give False, ' ' is not considered empty and will give True
@@ -44,6 +46,7 @@
 |               -Not In: Check if value does not exists in a sequence. True/False
 |               -Comparison: <, > The first elements are compared, if they are equal then moves on to next element
 |               -Is: checks stored memory adress, not list itself
+|===================================================================================================================
 |How to Change:
 |               -Add:
 |                   -.append(): Add new value at end of list
@@ -63,7 +66,7 @@
 |                            - Remove by position or leave empty for last in list
 |                            - Remove last row from matrix matrix.pop()
 |                            - Remove specified value from specified row matrix[2].pop(0)
-|
+|===================================================================================================================
 |How to Order:
 |               -.sort(): - For sorting current list into a new list
 |                            - default: from smallest to largest or A-Z.
@@ -74,8 +77,7 @@
 |               -.reverse(): - Reverse the order of the list
 |               -reversed(): - Creates an iterator object, not a list
 |               -list(reversed()): - Creates a reversed list of the iterator object
-|
-|
+|===================================================================================================================|
 |How to Copy:
 |               -Reference: If you use assignment (copy = original) any addition to new variable is reflected in original
 |                            - 
@@ -87,7 +89,7 @@
 |               
 |               -Note: copy.copy is more generaly that list.copy and not limited to lists
 |               -Note: Avoid Assignment | use .copy() for simple/flat list | use copy.deepcopy() for nested lists | Always make extra copy for testing
-|
+|===================================================================================================================
 |How to Combine:
 |               -Note: Multiplier * operator makes multiple copies of the same list  print(combo*2)
 |               -Combine 2 lists to make 3rd list. list3 = list1 + list2
@@ -96,8 +98,7 @@
 |               -zip() - pairing each item from each list together to make a list of tuple, stopping at the end of the shortest list 
 |                   -must convert from iterator. list(zip())
 |                   -Can pair with a string which gets parsed, counts as sequence zip(list1, list2, 'hi')
-|
-|
+|===================================================================================================================|
 |How to Iterate:
 |               -Iterator - Something doing the looping
 |                   -enumberate(iterable) - Returns postion of object + object, also use list()
@@ -111,11 +112,26 @@
 |
 |               -Iterable - Something you can loop over
 |                   -Use to transform data. Ex: .lower()/.upper()
-|
-|
+|===================================================================================================================|
 |How to Transform:
+|               -lambda - Doubles a number, input: expression. Ex: variable = lambda x: expression | variable = lambda x, y: x+y
+|                   - multiply = lambda x: x*2 
+|                       print(multiply(2))
+|                   - add = lambda x, y: x+y 
+|                       print(add(1,2))
 |
+|                       - Can contain any expression, including conditions. Ex: lambda i: i in 'python'
+|                   - check = lambda i: i in 'python' 
+|                       print(check('n'))
+|               -lambda + map: list(map(lambda r: float(r.replace('$','')),prices)))
+|                              ^--^ ^-^    ^----^ ^----------------------^1. Data transform 
+|                               |    |      2. Put in lambda 
+|                               |    3. map functions to iterator to manipulate data 
+|                               4. use list() to convert from memory state
 |
+|               -lambda + filter: for matrix specifically, iterations happen 1 row at a time
+|                       - lambda row: row[1] > 70, matrix_name
+|               -sorted + lambda: sorted(iterable, key = lambda x:x)
 |How to Filter:
 |
 |
@@ -395,6 +411,33 @@ print(map(str.upper, letters))
 '''                                    How to Transform:'''
 
 print('How to Transform:')
+print('Lambda')
+multiply = lambda x: x*2
+print(multiply(2))
+
+prices = ['$12.50', '$9.99', '$100.00']
+print(prices)
+p = '$12.50'
+t = p.replace('$','')
+print(t)
+w = float(t)
+print(w)
+r = lambda r: float(r.replace('$',''))
+print(r)
+print(list(map(lambda r: float(r.replace('$','')),prices)))
+
+prices = [120,30, 300, 80]
+print(list(filter(lambda p: p >= 100, prices)))
+
+student = [
+    ['Maria',85],
+    ['Kumar',90],
+    ['Max',60]
+]
+print(list(filter(lambda row: row[1] > 70, student)))
+print(student[1][0].startswith('M'))
+print(list(filter(lambda row: row[0].startswith('M'), student)))
+
 '''                                    How to Filter:'''
 
 print('How to Filter:')
