@@ -1,5 +1,11 @@
 '''                                            Tuples / Sets / Dictionaries
 |
+|Can Be: | Ordered | Duplicates | Indexed | Mutable |  
+|list[]  |    Y    |     Y      |    Y    |    Y    |     
+|tuple() |    Y    |     Y      |    Y    |    -    |
+|set{}   |    -    |     -      |    -    |    Y    |
+|dict{}  |    Y    |     -      |    Y    |    Y    |
+|
 |
 |Tuple:
 |                   -Ordered collection that can't be changed after creating it
@@ -54,15 +60,15 @@
 |                   - Equality (== / !=): Compares if sets contain the exact same elements. True/False
 |                   - Disjoint (.isdisjoint(): Returns True if both sets share no overlapping items)
 |==================================================================================================================|
-|
-|
-|
-|
-|
-|
-|
-|
-|
+|Dictionary:
+|                   - Store data in key value pairs
+|                   - {key:value}
+|                   - Ordered
+|                   - No Duplicates - last key replaces 1st key occurance, duplicate values are allowed
+|                   - Not Indexed but can be accessed by using their keys
+|                   - Mutable BUT must access using the key
+|==================================================================================================================|
+|Special Methods
 |
 |
 |
@@ -228,3 +234,44 @@ a = {10,20,30,40}
 b = {30,40,50,60}
 print(a.isdisjoint(b))
 """
+'''                                    Dictionary'''
+"""
+#Ordered
+my_dict = {
+    'a':10,
+    'b':20,
+    'c':30
+}
+print(my_dict)
+
+#No Duplicates - last key replaces 1st key occurance, duplicate values are allowed
+my_dict = {
+    'a':10,
+    'b':20,
+    'c':30,
+    'd':30
+}
+print(my_dict)
+
+#Not Indexed but can be accessed by using their keys 
+my_dict = {
+    'a':10,
+    'b':20,
+    'c':30
+}
+#print(my_dict[1])
+print(my_dict['a'])
+
+#Mutable BUT must access using the key
+my_dict = {
+    'a':10,
+    'b':20,
+    'c':30,
+    'd':30
+}
+my_dict['c'] = 80
+print(my_dict)
+"""
+'''                                    Dictionary Methods(Special)'''
+#Access:
+user = {id:1, 'age':30,'city': 'berlin'}
