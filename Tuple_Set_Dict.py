@@ -370,3 +370,6 @@ user_str = {
     
 }
 print(user_str)
+
+user1 = {key:value.upper() for key, value in user.items() if isinstance(value,str)}
+print(user1)
