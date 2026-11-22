@@ -353,4 +353,20 @@ user = {
 # 3) Convert values to Uppercase
 # 4) Use elegant and short solution
 """
-
+user = {
+    'id': 1,
+    'name': 'John',
+    'age': 30,
+    'city': 'Berlin',
+}
+#Dict comprehensions:
+#Key value expression
+#loop
+#Optional condition
+user_str = {
+    key: value.upper()#expression
+    for key,value in user.items() #loop
+    if isinstance(value, str) #filter
+    
+}
+print(user_str)
