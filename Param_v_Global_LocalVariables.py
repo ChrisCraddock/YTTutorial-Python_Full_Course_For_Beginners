@@ -36,3 +36,19 @@
 |
 |===================================================================================================================|
 '''
+def clean_name(x):
+    cleaned = x.strip().lower()
+    print('Input text:',x)
+    print('Cleaned text:',cleaned)
+
+name = ' OlIVer  '
+clean_name(name)
+
+case_rule = 'lower'
+def clean_name(x):
+    cleaned = x.strip()
+    if case_rule == 'lower':
+        cleaned = cleaned.lower()
+    print('Cleaned text:',cleaned)
+
+clean_name(name)
