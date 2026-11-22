@@ -1,10 +1,10 @@
 '''                                            Tuples / Sets / Dictionaries
 |
-|Can Be: | Ordered | Duplicates | Indexed | Mutable |  
-|list[]  |    Y    |     Y      |    Y    |    Y    |     
-|tuple() |    Y    |     Y      |    Y    |    -    |
-|set{}   |    -    |     -      |    -    |    Y    |
-|dict{}  |    Y    |     -      |    Y    |    Y    |
+|Can Be: | Ordered | Duplicates | Indexed | Changeable |  
+|list[]  |    Y    |     Y      |    Y    |     Y      |     
+|tuple() |    Y    |     Y      |    Y    |     -      |
+|set{}   |    -    |     -      |    -    |     Y      |
+|dict{}  |    Y    |     -      |    Y    |     Y      |
 |
 |
 |Tuple:
