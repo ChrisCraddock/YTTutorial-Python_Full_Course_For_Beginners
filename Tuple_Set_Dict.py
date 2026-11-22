@@ -69,13 +69,35 @@
 |                   - Mutable BUT must access using the key
 |==================================================================================================================|
 |Special Methods
+|                  - Access:
+|                   - .get(): Prints None if key value not found.
+|                       - Can customize return if not found. Ex: ('name','Unknown')
+|                  -Checks:
+|                   - in/not in
+|                  -View Objects:
+|                   -.keys(): return all the keys in the dictionary
+|                   -.values(): return all the values in the dictionary
+|                   -.items(): return all the key/value pairs in the dictionary
+|                       -use for looping, transforming, new dict building, compairing etc..
 |
-|
-|
-|
-|
-|
-|
+|                   -Add: variable_name['newKey'] = 'value'
+|                   -Update: variable_name['existingKey'] = 'value'
+|                   -.update(): add/update keys using another dictionary
+|                   -Remove:
+|                   -.pop(): must specify key. Removes both key/value pair
+|                       - Can customize return if not found. Ex: ('name','Unknown')
+|                   -.popitem(): returns and deletes the most recent key/value pair added
+|                   -Creation:
+|                   -dict.fromkeys(): Builds a new dictionary where all kets get the same default value.
+|                       - Ex: user = dict.fromkeys(['key1', etc..],None) #Can other constant value 
+|==================================================================================================================|
+|User Case:
+|                   -Mapping translations to friendly values
+|                   -Mapping Abbreviations
+|                   -Databases or API Records
+|                   -ETL and Pipeline Settings
+|                   -Metadata
+|==================================================================================================================|
 '''
 '''                                    Lists'''
 """
@@ -273,5 +295,62 @@ my_dict['c'] = 80
 print(my_dict)
 """
 '''                                    Dictionary Methods(Special)'''
+"""
 #Access:
-user = {id:1, 'age':30,'city': 'berlin'}
+user = {'id':1, 'age':30,'city': 'berlin'}
+#if the key is not found, throws Keyerror
+print(user['id'])
+print(user.get('name')) #gives None if key not found
+
+#Check
+print('age' in user)
+
+#View Objects
+print(user.keys())
+#View Values
+print(user.values())
+#View Key/Value
+print(user.items())
+
+#Looping
+for u in user.items():
+    print(u)
+#-or-
+for key, value in user.items():
+    print(key, value)
+
+#Add
+user['name'] = 'John'
+#Update
+user['age'] = 35
+user.update({'age':40, 'city':'paris'})
+#Remove
+user.pop('age') #removes key and value
+print(user.popitem())
+print(user)
+
+#Creation
+user1 = {
+    'id': None,
+    'name': None,
+    'age': None,
+    'city': None,
+}
+#-or-
+user2 = dict.fromkeys(['id','name','age','city'],None)
+print(user2)
+"""
+'''                                    Challenge'''
+"""
+user = {
+    'id': 1,
+    'name': 'John',
+    'age': 30,
+    'city': 'Berlin',
+}
+# 1) Create new Dict
+# 2) Keep only key/value pairs with String values
+# 3) Convert values to Uppercase
+# 4) Use elegant and short solution
+"""
+
